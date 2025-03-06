@@ -20,7 +20,9 @@ int main (int argc, char *argv[]) {
     } else {
         write(p[1], "ping", 4);
         wait(0);
+        close(p[1]);
         read(p[0], buf, 4);
+        close(p[0]);
         printf("%d: received pong\n", getpid());
     }
     exit(0);
