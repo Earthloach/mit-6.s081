@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
     char buf[MESGSIZE];
     read(0, buf, MESGSIZE);
 
-    char xargv[MAXARG];
+    char *xargv[MAXARG];
     int xargc = 0;
     for (int i = 1;i < argc; i++) {
         xargv[xargc++] = argv[i];
