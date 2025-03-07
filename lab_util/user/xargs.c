@@ -6,7 +6,6 @@
 #define MESGSIZE 16
 
 int main(int argc, char *argv[]) {
-    sleep(10);
     char buf[MESGSIZE];
     read(0, buf, MESGSIZE);
 
